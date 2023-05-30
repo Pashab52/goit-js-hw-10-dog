@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+
+
+
+img {
+    display: block;
+    object-fit: cover;
+    border: 1px solid var(--ss-border-color);
+        border-radius: var(--ss-border-radius);
+}
+.cat-header{
+    font-size: 36px;
+}
+ 
+ .cat-temperament{
+    max-width: 510px;
+ }
+.breed-select{
+  max-width: 1090px;
+  margin: 0 auto 10 auto;  
+background-color: snow;
+
+}
+
+.container{
+    position: relative;
+    padding: 50px;
+    
+}
+.error{
+    display: none;
+}
+
+.cat-info{
+    display: flex;
+    
+justify-content: center;
+    gap: 10px;
+    
+}
+.descr-wrap{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid var(--ss-border-color);
+    border-radius: var(--ss-border-radius);
+    background-color: snow;
+}
+
+.cat-description{
+    max-width: 510px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.loader {
+  
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    width: 268px;
+    height: 268px;
+    border: 5px solid;
+    border-color: #000000 transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
