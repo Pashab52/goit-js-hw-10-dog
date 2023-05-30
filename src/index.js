@@ -18,7 +18,6 @@ const refs = {
   loader: document.querySelector('.loader-inv'),
   error: document.querySelector('.error'),
 };
-console.log(refs.loader);
 
 fetchBreeds()
   .then(data => {
@@ -46,7 +45,7 @@ function createMarkup(data) {
   new SlimSelect({
     select: '#selectElement',
     settings: {
-      placeholderText: 'Select the breed of the cat',
+      placeholderText: 'Select the breed of the dog',
     },
   });
   // refs.selectBreed.innerHTML = breedsArray.join('');
@@ -72,8 +71,14 @@ function handleChangeSelect(event) {
 }
 
 function createCatInfoMarkup(data) {
-  const catInfoMarkup = `<img src="${data[0].url}" alt="cat photo" height="540" width="540"/><div class="descr-wrap"><h1 class="cat-header">${data[0].breeds[0].name}</h1>
-  <p class="cat-description">${data[0].breeds[0].description}</p><p class="cat-temperament"><b>Temperament:</b>${data[0].breeds[0].temperament}</p></div>`;
+  const catInfoMarkup = `<img src="${data[0].url}" alt="dog photo" height="540" width="540"/>
+  <div class="descr-wrap">
+  <h1 class="cat-header">${data[0].breeds[0].name}</h1>
+  <p class="cat-description"><b>Breed for: </b>${data[0].breeds[0].bred_for}</p>
+  <p class="cat-description"><b>Height: </b>${data[0].breeds[0].height.metric} cm</p>
+  <p class="cat-description"><b>Weight: </b>${data[0].breeds[0].weight.metric} kg</p>
+  <p class="cat-description"><b>Life span: </b>${data[0].breeds[0].life_span}</p>
+  <p class="cat-temperament"><b>Temperament: </b>${data[0].breeds[0].temperament}</p></div>`;
 
   refs.catInfo.innerHTML = catInfoMarkup;
 }

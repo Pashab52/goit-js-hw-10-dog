@@ -3,7 +3,8 @@
 *::after {
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: aliceblue;
 }
 
@@ -13,50 +14,56 @@ img {
     display: block;
     object-fit: cover;
     border: 1px solid var(--ss-border-color);
-        border-radius: var(--ss-border-radius);
+    border-radius: var(--ss-border-radius);
 }
-.cat-header{
+
+.cat-header {
     font-size: 36px;
 }
- 
- .cat-temperament{
+
+
+.cat-description {
     max-width: 510px;
- }
-.breed-select{
-  max-width: 1090px;
-  margin: 0 auto 10 auto;  
-background-color: snow;
-
 }
 
-.container{
-    position: relative;
-    padding: 50px;
-    
-}
-.error{
-    display: none;
+.cat-temperament {
+    max-width: 510px;
 }
 
-.cat-info{
+.cat-info {
     display: flex;
-    
-justify-content: center;
+    justify-content: center;
     gap: 10px;
-    
 }
-.descr-wrap{
-   
+
+.descr-wrap {
+
     display: flex;
     flex-direction: column;
     padding: 15px;
     border: 1px solid var(--ss-border-color);
     border-radius: var(--ss-border-radius);
     background-color: snow;
+    width: 540px;
 }
 
-.cat-description{
-    max-width: 510px;
+
+
+.breed-select {
+    max-width: 1090px;
+    margin: 0 auto 10 auto;
+    background-color: snow;
+
+}
+
+.container {
+    position: relative;
+    padding: 50px;
+
+}
+
+.error {
+    display: none;
 }
 
 
@@ -65,7 +72,7 @@ justify-content: center;
 }
 
 .loader {
-  
+
     position: absolute;
     top: 150px;
     left: 40%;
